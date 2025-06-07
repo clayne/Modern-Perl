@@ -18,7 +18,7 @@ my $wanted_date;
 sub VERSION {
     my ($self, $version) = @_;
 
-    my $default = 2024;
+    my $default = 2025;
 
     return $Modern::Perl::VERSION || $default unless defined $version;
     return $Modern::Perl::VERSION || $default if             $version < 2009;
@@ -80,6 +80,7 @@ sub validate_date {
         2022 => ':5.34',
         2023 => ':5.36',
         2024 => ':5.38',
+        2025 => ':5.40',
     );
 
     my $date = shift;
@@ -183,31 +184,35 @@ I<year> value as the single optional import tag. For example:
 
     use Modern::Perl '2018';
 
-... enables 5.26 features.
+... enables 5.26 features, and:
 
     use Modern::Perl '2019';
 
-... enables 5.28 features.
+... enables 5.28 features, and:
 
     use Modern::Perl '2020';
 
-... enables 5.30 features.
+... enables 5.30 features, and:
 
     use Modern::Perl '2021';
 
-... enables 5.32 features.
+... enables 5.32 features, and:
 
     use Modern::Perl '2022';
 
-... enables 5.34 features.
+... enables 5.34 features, and:
 
     use Modern::Perl '2023';
 
-... enables 5.36 features.
+... enables 5.36 features, and:
 
     use Modern::Perl '2024';
 
-... enables 5.38 features.
+... enables 5.38 features, and:
+
+    use Modern::Perl '2025';
+
+... enables 5.40 features.
 
 Obviously you cannot use newer features on earlier versions. Perl will throw
 the appropriate exception if you try.
